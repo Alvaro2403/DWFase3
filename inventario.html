@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Diseño e implementación frontend.</title>
+
+  </head>
+  <body>
+        <nav class="navbar navbar-expand-md navbar-light" style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="./Logo.png" alt="Logo" class="img-fluid" width="50" ></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="administrador.html">Administrador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="inventario.html">Inventario</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="recursos.html">Recursos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav><br>
+        <main>
+            <ul class="nav nav-tabs nav-justified">
+                <li class="nav-item">
+                  <button id="ingresar-tab" class="nav-link active" data-bs-toggle="pill" data-bs-target="#ingresar" aria-controls="ingresar" aria-selected="true">Ingresar Producto</button>
+                </li>
+                <li class="nav-item">
+                  <button id="actualizar-tab" data-bs-toggle="pill" data-bs-target="#actualizar" aria class="nav-link" aria-controls="actualizar" aria-selected="false">Actualizar Producto</button>
+                </li>
+                <li class="nav-item">
+                  <button data-bs-toggle="pill" class="nav-link" href="#eliminar">Eliminar Producto</button>
+                </li>
+                <li class="nav-item">
+                  <button data-bs-toggle="pill" class="nav-link" href="#consultar">Consultar Producto</button>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div id="ingresar" class="tab-pane fade show active" role="tabpanel" >
+                  <form class="pt-5 col-6 mx-auto">
+                    <div class="mb-4">
+                      <label for="Codproducto" class="form-label">Codigo De Producto</label>
+                      <input type="text" class="form-control" id="Codproducto">
+                    </div>
+                    <div class="mb-4">
+                      <label for="Nomproducto" class="form-label">Nombre De Producto</label>
+                      <input type="text" class="form-control" id="Nomproducto">
+                    </div>
+                    <div class="mb-4">
+                      <label for="Marca" class="form-label">Marca De Producto</label>
+                      <input type="text" class="form-control" id="Marca">
+                    </div>
+                    <div class="mb-4">
+                      <label for="precio">Precio De Compra</label>
+                      <input type="number" min="1" class="form-control" id="precio">
+                    </div>
+                    <div class="mb-4">
+                      <label for="cantidad">Cantidad De Compra</label>
+                      <input type="number" min="1"  class="form-control" id="cantidad">
+                    </div>
+                    <button type="submit" class="btn btn-dark">Registrar Producto</button>
+                  </form>
+                </div>
+                <div id="actualizar" class="tab-pane fade" role="tabpanel">
+                  <form class="pt-5 col-6 mx-auto">
+                    <div class="mb-4">
+                      <label for="ActualizarCodproducto" class="form-label">Codigo De Producto</label>
+                      <input type="text" class="form-control" id="ActualizarCodproduct">
+                    </div>
+                    <div class="mb-4">
+                      <label for="ActualizarNomproducto" class="form-label">Nombre De Producto</label>
+                      <input type="text" class="form-control" id="ActualizarNomproducto">
+                    </div>
+                    <div class="mb-4">
+                      <label for="ActualizarMarca" class="form-label">Marca De Producto</label>
+                      <input type="text" class="form-control" id="ActualizarMarca">
+                    </div>
+                    <div class="mb-4">
+                      <label for="Actualizarprecio">Precio De Compra</label>
+                      <input type="number" min="1" class="form-control" id="Actualizarprecio">
+                    </div>
+                    <div class="mb-4">
+                      <label for="Actualizarcantidad">Cantidad De Compra</label>
+                      <input type="number" min="1"  class="form-control" id="Actualizarcantidad">
+                    </div>
+                    <button type="submit" class="btn btn-dark">Modificar Producto</button>
+                  </form>
+                </div>
+                <div id="eliminar"class="tab-pane fade" role="tabpanel">
+                  <form class="pt-5 col-6 mx-auto">
+                    <div class="mb-4">
+                      <label for="delete"class="form-label">Codigo De Producto</label>
+                      <input type="text" class="form-control" id="delete">
+                    </div>
+                    <button type="submit" class="btn btn-dark">Borrar Producto</button>
+                  </form>
+                </div>
+                <div id="consultar" class="tab-pane fade" role="tabpanel">
+                  <form class="pt-5 col-6 mx-auto">
+                    <div class="mb-4">
+                      <label for="buscar" class="form-label">Consultar Producto</label>
+                      <input type="text" class="form-control" id=buscar"">
+                    </div>
+                    <button type="submit" class="btn btn-dark">Consultar Producto</button>
+                  </form>
+                </div>
+              </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+</html>
